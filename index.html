@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les livres usagés sont aussi au programme</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@100;200,300;400,600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+
+</head>
+<body>
+    <section   class="header">
+        <nav>
+                <a href="index.html"><img src="Images/logo.jpg"></a>
+            
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>    
+                <li><a href="page1.html">Nos livres</a></li>
+                <li><a href="page2.html">Nos romans</a></li>
+                <li><a href="page3.html">Livres par programme</a></li>
+                <li><a href="">Login</a></li>
+                <li><a href="">Créer compte</a></li>
+            </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>Les livres usagés sont aussi au programme</h1>
+            <p>Le ralentissement économique influence la disponiblité de certains livres indispensables.
+                <br>Soyez rassurés, les livres usagés sont une solution.
+            </p>
+            <a href="" class="hero-btn">Visiter notre site pour trouver des livres</a>
+        </div>
+
+    </section>
+
+    <!--------Livres------->
+
+    <section class="livres">
+        <h1>Notre site vous propose:</h1>
+        <p>Les listes complètes de nos livres et romans sont disponibles dans chacune des page du site</p>
+        <div class ="row">
+            <div class="course-col">
+                <h3>Les livres</h3>
+                <p>Les livres proposés sont tous au programme pour chaque département.
+                    Les articles ici vendus sont garantis au programme pour l'année en cours.
+                </p>
+            </div>
+            <div class="course-col">
+                <h3>Les romans</h3>
+                <p>Les romans que vous trouverez chez nous sont aussi programme de l'année en cours.
+                    Toutefois il vous est proposé des romans de toutes catégories pour
+                     vous divertire ou pour vous évadés</p>
+            </div>
+            <div class="course-col">
+                <h3>La rubrique en développement</h3>
+                <p>Étant donné que notre site est en construction, nous serons honnorés 
+                    de savoir votre suggestion pour l'améliorer. Nous souhaitons connaitre 
+                    les rubriques que vous aimerez rencontrer dans notre site</p>
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+     
+<!---------JavaScript Pour mon Menu------------->
+    <script>
+
+var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+    navLink.style.right = "0";
+    }
+    function hideMenu(){
+    navLink.style.right = "-200px";
+    }
+    </script>
+
+
+    
+</body>
+</html>

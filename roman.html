@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page1</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@100;200,300;400,600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+</head>
+<body>
+    <section class="campus">
+        <nav>
+            
+            <div class="nav-links-p1" id="navLinks-p1">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>    
+                <li><a href="index.html">Acceuil</a></li>
+                <li><a href="page2.html">Retour</a></li>
+            </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div id="root-roman">
+            <h1>Liste des romans</h1>
+            <span id="affichage">
+              <ul id="romans"></ul>
+          </span>
+        </div>
+        <script src="roman.js"></script>
+        <script src="ins_roman.js"></script>
+
+    </section>
+</body>
+</html>
