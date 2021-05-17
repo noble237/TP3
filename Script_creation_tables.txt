@@ -1,0 +1,76 @@
+Scritp creation table livre:
+
+CREATE TABLE LIVRE (
+code NUMBER(15,0),
+auteur VARCHAR2(20 BYTE),
+titre VARCHAR2(20 BYTE),
+date_parution DATE,
+editeur VARCHAR2(20 BYTE),
+CONSTRAINT PK_LIVRE PRIMARY KEY (code)
+);
+
+Script insertion de donnés.
+
+INSERT INTO livre (code,auteur,titre,date_parution,editeur) VALUES (9782761660228, 'Laurin', 'Anthologie', ('01-01-13'), 'Beauchemin');
+INSERT INTO livre (code,auteur,titre,date_parution,editeur) VALUES (9782761399241, 'Gagnon', 'Procédés', ('01-01-19'), 'Pearson');
+INSERT INTO livre (code,auteur,titre,date_parution,editeur) VALUES (9782761355100, 'Chénier', 'Francais2', ('01-01-15'), 'Pearson');
+INSERT INTO livre (code,auteur,titre,date_parution,editeur) VALUES (9782761375542, 'Gaetz', 'Avenues1', ('01-01-16'), 'Pearson');
+INSERT INTO livre (code,auteur,titre,date_parution,editeur) VALUES (9782761660228, 'Gaetz', 'Avenues2', ('01-01-16'), 'Pearson');
+INSERT INTO livre (code,auteur,titre,date_parution,editeur) VALUES (9782894618622, 'Contant', 'Maths', ('01-08-02'), 'Cheneliere');
+INSERT INTO livre (code,auteur,titre,date_parution,editeur) VALUES (9782707301482, 'Beckett', 'Attendant', ('01-01-13'), 'Minuit');
+INSERT INTO livre (code,auteur,titre,date_parution,editeur) VALUES (9782761788458, 'D Anjou', 'Yvain', ('01-01-16'), 'CEC');
+INSERT INTO livre (code,auteur,titre,date_parution,editeur) VALUES (9782070373628, 'Gary', 'La vie', ('01-01-13'), 'Folio');
+COMMIT;
+
+Script localhost.
+
+
+BEGIN
+ORDS.enable_sechema(
+P_enabled             => TRUE,
+P_schema              => 'RESTSCOTT',
+P_url_mapping_type    => 'BASE_PATH',
+P_url_mapping_pattern => 'hr2',
+P_auto_rest_auth      => FALSE
+);
+
+COMMIT;
+END;
+
+BEGIN
+ORDS.enable_object (
+p_enabled             => TRUE,
+p_schema              => 'RESTSCOTT',
+p_object              => 'LIVRE',
+P_object_type         => 'TABLE',
+P_object_alias        => 'livres'
+);
+COMMIT;
+END;
+
+Script creation table roman:
+
+CREATE TABLE ROMAN (
+code NUMBER(15,0),
+auteur VARCHAR2(20 BYTE),
+titre VARCHAR2(20 BYTE),
+parution DATE,
+editeur VARCHAR2(20 BYTE),
+CONSTRAINT PK_ROMAN PRIMARY KEY (code)
+);
+
+INSERT INTO roman (code,auteur,titre,parution,editeur) VALUES (9782707301482, 'Beckett', 'Attendant', ('01-01-13'), 'Minuit');
+INSERT INTO roman (code,auteur,titre,parution,editeur) VALUES (9782761788458, 'D Anjou', 'Yvain', ('01-01-16'), 'CEC');
+INSERT INTO roman (code,auteur,titre,parution,editeur) VALUES (9782070373628, 'Gary', 'La vie', ('01-01-13'), 'Folio');
+COMMIT;
+
+BEGIN
+ORDS.enable_object (
+p_enabled             => TRUE,
+p_schema              => 'RESTSCOTT',
+p_object              => 'ROMAN',
+P_object_type         => 'TABLE',
+P_object_alias        => 'romans'
+);
+COMMIT;
+END;
